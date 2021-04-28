@@ -4,12 +4,12 @@
 
 require("sites.php");
 
-if (isset($_GET['text']) == false) {
+if (isset($_GET['q']) == false) {
 	header("Location: " . $defaultSite->queryUrl());
 	exit;
 }
 
-$input = trim($_GET['text']);
+$input = trim($_GET['q']);
 
 foreach ($sites as $site) {
 	$location = $site->inputUrl($input);

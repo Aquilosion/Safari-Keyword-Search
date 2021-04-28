@@ -2,7 +2,7 @@
 
 require("sites.php");
 
-$input = $_GET['part'];
+$input = $_GET['q'];
 
 foreach ($sites as $site) {
 	$query = $site->inputQuery($input);

@@ -1,4 +1,13 @@
 {
     "key": "r",
-    "pattern": "https://www.reddit.com/r/@@@/"
+    "pattern": "https://www.reddit.com/r/@@@/",
+    "default": "https://www.reddit.com/",
+    "suggest": {
+        "url": "https://www.reddit.com/api/search_reddit_names.json?query=@@@",
+		"format": "json",
+        "results": [
+            "names",
+			true
+        ]
+    }
 }

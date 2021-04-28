@@ -63,8 +63,8 @@ class SearchSite {
 		}
 	}
 	
-	public function queryUrl($query) {
-		if (isset($query)) {
+	public function queryUrl($query = null) {
+		if (!is_null($query)) {
 			return $this->applyPattern($query);
 		} else {
 			return $this->default;
